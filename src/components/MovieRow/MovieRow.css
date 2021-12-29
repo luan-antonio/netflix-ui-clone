@@ -1,0 +1,35 @@
+.movieRow {
+  margin: 15px 0 15px 0;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  row-gap: 15px;
+}
+
+.movieRow h2 {
+  margin: 0 0 0 30px;
+}
+
+.movieRow--listarea {
+  overflow-x: hidden;
+  padding-left: 30px;
+}
+
+.movieRow--list {
+  display: flex;
+}
+
+.movieRow--item {
+  width: 200px;
+  cursor: pointer;
+  transform: scale(0.9);
+  transition: margin 0.5s, transform 0.2s;
+}
+
+.movieRow--item:hover {
+  margin: 0 30px;
+  transform: scale(1);
+}
+
+.movieRow--item img {
+  width: inherit;
+}
