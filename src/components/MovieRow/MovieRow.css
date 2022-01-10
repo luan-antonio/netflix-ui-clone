@@ -3,6 +3,7 @@
   display: grid;
   grid-template-rows: auto 1fr;
   row-gap: 15px;
+  position: relative;
 }
 
 .movieRow h2 {
@@ -16,6 +17,7 @@
 
 .movieRow--list {
   display: flex;
+  transition: margin ease .5s;
 }
 
 .movieRow--item {
@@ -32,4 +34,34 @@
 
 .movieRow--item img {
   width: inherit;
+}
+
+.movieRow--left,
+.movieRow--right {
+  z-index: 1;
+  position: absolute;
+  top: 59px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 270px;
+  background-color: rgba(0, 0, 0, .6);
+  opacity: 1;
+  cursor: pointer;
+  overflow: hidden;
+  transition: opacity ease .5s;
+}
+
+.movieRow--left {
+  left: 0;
+}
+
+.movieRow--right {
+  right: 0;
+}
+
+.movieRow:hover .movieRow--left,
+.movieRow:hover .movieRow--right {
+  opacity: 1;
 }
